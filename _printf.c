@@ -20,8 +20,24 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			size += validate_param(format, params, i);
-			i++;
+			size = validate_param(format, params, i);
+			if (size == 0)
+			{
+				if (format[i] == '%' && (format[i + 1] != 'c') && (format[i + 1] != 's'))
+				{
+					write(1, &format[i], 1);
+					length++;
+				}
+				else
+				{
+					i++;
+				}
+			}
+			else
+			{
+				i++;
+			}
+			length = size + length;
 		}
 		else
 		{
@@ -30,5 +46,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(params);
-	return (length + size);
+	return (length);
 }
