@@ -7,29 +7,28 @@
  */
 int _printf(const char *format, ...)
 {
-    va_list params;
+	va_list params;
 
-    int length = 0;
-    int size = 0;
-    int i;
+	int length = 0;
+	int size = 0;
+	int i;
 
-    va_start(params, format);
-    if (!format || (format[0] == '%' && format[1] == '\0'))
-        return (-1);
-    for (i = 0; format[i] != '\0'; i++)
-    {
-        if (format[i] == '%')
-        {
-            size += validate_param(format, params, i);
-            i++;
-        }
-        else
-        {
-            write(1, &format[i], 1);
-            length++;
-        }
-    }
-
-    va_end(params);
-    return (length + size);
+	va_start(params, format);
+	if (!format || (format[0] == '%' && format[1] == '\0'))
+		return (-1);
+	for (i = 0; format[i] != '\0'; i++)
+	{
+		if (format[i] == '%')
+		{
+			size += validate_param(format, params, i);
+			i++;
+		}
+		else
+		{
+			write(1, &format[i], 1);
+			length++;
+		}
+	}
+	va_end(params);
+	return (length + size);
 }

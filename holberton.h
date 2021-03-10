@@ -6,11 +6,15 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-
+/**
+ * struct optype - contain the data types to agree to function
+ * @type: type of data to print
+ * @func: The function associated
+ */
 typedef struct optype
 {
-  char type;
-  int (*func)();
+	char type;
+	int (*func)();
 } optype_t;
 
 
