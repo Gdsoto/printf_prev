@@ -10,10 +10,10 @@ int validate_param(const char *format, va_list param, int i)
 {
   optype_t ops[] = {
       {'c', printchar},
-      //{'d', printint},
-      //{'i', printint},
+      /*{'d', printint},
+      {'i', printint},*/
       {'s', printstring},
-      //{'b', op_bin},*/
+      /*{'b', op_bin},*/
       {'%', printperc},
       {'\0', NULL}
   };
