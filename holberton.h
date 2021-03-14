@@ -10,5 +10,11 @@
 /*Functions*/
 int _printf(const char *format, ...);
 
+typedef struct optype
+{
+  char *optype;
+  int (*func)(int i, int j);
+} optype_t;
+
 
 #endif /* HOLBERTON_H */
