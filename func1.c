@@ -1,21 +1,23 @@
 #include "holberton.h"
 
-
-
-int (*get_parametros(char))(int, int)
+int validate_param(const char *format, va_list param, int i)
 {
   optype_t ops[] = {
-    {"c", op_char},
-    {"d", op_int},
-    {"e", op_int},
-    {"f", op_float}.
-    {"g", op_char},
-    {"i", op_int},
-    {"o", op_int},
-    {"s", op_float}.
-    {"u", op_char},
-    {"x", op_int},
-    {"%", op_perc}
-    {NULL, NULL}
-  };
+      {'c', op_char},
+      {'d', op_int},
+      {'i', op_int},
+      {'s', op_float},
+      {'%', op_perc}};
+
+  int size = 0, j = 0;
+
+  while (j <= 4)
+  {
+    if (format[i + 1] == ops[j].type[0])
+    {
+      size = ops[j].func(param);
+    }
+    j++;
+  }
+  return (size);
 }

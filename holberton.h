@@ -7,14 +7,16 @@
 #include <unistd.h>
 
 
-/*Functions*/
-int _printf(const char *format, ...);
-
 typedef struct optype
 {
-  char *optype;
-  int (*func)(int i, int j);
+  char *type;
+  int (*func)();
 } optype_t;
+
+
+/*Functions*/
+int validate_param(const char *format, va_list param, int i);
+int _printf(const char *format, ...);
 
 
 #endif /* HOLBERTON_H */

@@ -10,6 +10,7 @@ int _printf(const char *format, ...)
     va_list params;
 
     int length = 0;
+    int size = 0;
     int i;
 
     va_start(params, format);
@@ -18,7 +19,7 @@ int _printf(const char *format, ...)
     {
         if (format[i] == '%')
         {
-            // aqui iria codigo si hay despues una c, d, s
+            size = validate_param(format, params, i);
         }
         else
         {
