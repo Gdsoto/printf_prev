@@ -7,11 +7,13 @@
  */
 int printchar(va_list params)
 {
+  unsigned int len = 0;
   char *c;
 
   c = va_arg(params, char *);
   write(1, &c, 1);
-  return (1);
+  len++;
+  return (len);
 }
 
 /**
