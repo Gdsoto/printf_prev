@@ -12,22 +12,25 @@ int _printf(const char *format, ...)
     int length = 0;
     int size = 0;
     int i;
-
+   
+    
     va_start(params, format);
 
     for (i = 0; format[i] != '\0'; i++)
     {
         if (format[i] == '%')
         {
-            size = validate_param(format, params, i);
+            size += validate_param(format, params, i);
         }
         else
         {
-            putchar(format[i]);
-            length++;
+	      write(1, &format[i], 1);
+	   
+	  length++;
         }
     }
 
     va_end(params);
-    return (length);
+    return (length + size);
+    
 }

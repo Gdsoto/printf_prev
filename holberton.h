@@ -9,7 +9,7 @@
 
 typedef struct optype
 {
-  char *type;
+  char type;
   int (*func)();
 } optype_t;
 
@@ -17,6 +17,7 @@ typedef struct optype
 /*Functions*/
 int validate_param(const char *format, va_list param, int i);
 int _printf(const char *format, ...);
-
-
+int printchar(va_list params);
+int printperc(void);
+int printint(va_list params);
 #endif /* HOLBERTON_H */

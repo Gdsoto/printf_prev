@@ -2,23 +2,41 @@
 
 
 
-int printchar(va_list args)
+int printchar(va_list params)
 {
-  char *s;
-  s = va_arg(args, char*);
-  return (s);
+  char *c;
+  c = va_arg(params, char*);
+  write(1, &c, 1);
+  return(1);
 }
 
-int printint(va_list args)
+
+int printint(va_list params)
 {
-  return (0);
+  int *n;
+  int len;
+
+  n = va_arg(params, int*);
+
+  
+
+  if (n >= 0)
+      {
+	write(1, &n, 4);
+      }  
+  return (1);
+}
+/**
+int printstring(va_list params);
+{
+  
+  return ();
+}
+*/
+int printperc(void)
+{
+  
+  write(1, "%", 1);
+  return 1;
 }
 
-int printstring(va_list args);
-{
-  return ();
-}
-int printperc(va_list args);
-{
-  return ();
-}
