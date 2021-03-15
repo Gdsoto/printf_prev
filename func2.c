@@ -13,7 +13,7 @@ int printchar(va_list param)
 	c = va_arg(param, char *);
 	write(1, &c, 1);
 	len++;
-	return (len);
+	return (1);
 }
 
 /**
