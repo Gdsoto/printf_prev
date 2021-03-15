@@ -2,15 +2,15 @@
 
 /**
  * printchar - prints a char
- * @params: list of parameters
+ * @param: list of parameters
  * Return: 1
  */
-int printchar(va_list params)
+int printchar(va_list param)
 {
 	unsigned int len = 0;
 	char *c;
 
-	c = va_arg(params, char *);
+	c = va_arg(param, char *);
 	write(1, &c, 1);
 	len++;
 	return (len);
