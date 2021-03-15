@@ -17,7 +17,8 @@ typedef struct optype
 /*Functions*/
 int validate_param(const char *format, va_list param, int i);
 int _printf(const char *format, ...);
+int printstring(va_list param);
 int printchar(va_list params);
 int printperc(void);
-int printint(va_list params);
+//int printint(va_list params);
 #endif /* HOLBERTON_H */

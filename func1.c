@@ -1,14 +1,18 @@
 #include "holberton.h"
 
+/**
+ * validate_param - validate the params to choose the datatype;
+ * @format: string of entry
+ * @param: list of parameters
+ * Return: size
+ */
 int validate_param(const char *format, va_list param, int i)
 {
   optype_t ops[] = {
       {'c', printchar},
-      
-      // {'s', op_string},
-      //{'%', op_perc},
-      {'d', printint},
-      {'i', printint},
+      //{'d', printint},
+      //{'i', printint},
+      {'s', printstring},
       //{'b', op_bin},*/
       {'%', printperc},
       {'\0', NULL}
