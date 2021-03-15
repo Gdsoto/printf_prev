@@ -35,7 +35,7 @@ int printstring(va_list param)
     write(1, &str[i], 1);
     len++;
   }
-  return (str[i]);
+  return (len);
 }
 
 /**
