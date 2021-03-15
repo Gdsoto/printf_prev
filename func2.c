@@ -24,7 +24,7 @@ int printchar(va_list params)
 
 int printstring(va_list param)
 {
-  unsigned int i, len = 0;
+  unsigned int i;
   char *str;
 
   str = va_arg(param, char *);
@@ -33,9 +33,9 @@ int printstring(va_list param)
   for (i = 0; str[i] != 0; i++)
   {
     write(1, &str[i], 1);
-    len++;
+    
   }
-  return (len);
+  return (str[i]);
 }
 
 /**
