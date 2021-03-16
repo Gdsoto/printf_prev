@@ -83,7 +83,7 @@ int print_int(va_list param)
 		decimal = decimal / 10;
 		i++;
 	}
-	for (j = i; j > 1; j--)
+	for (j = 1; j <= i; j++)
 	{
 		division = division * 10;
 	}
