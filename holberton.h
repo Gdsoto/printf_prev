@@ -27,5 +27,6 @@ int printperc(void);
 int _putchar(char c);
 int print_int(va_list params);
 int print_reverse(va_list param);
+int print_Rot(va_list param);
 
 #endif /* HOLBERTON_H */

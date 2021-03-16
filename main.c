@@ -2,13 +2,13 @@
 
 int main(void)
 {
-	int len, len2;
+	int len, len2 = 0;
 
-	len = _printf("%c", 'f');
-	len2= printf("%c", 'f');
+	len = _printf("Unknown:[%R]\n", "Hola");
+	len2 = _printf("Unknown:[%r]\n", "Hola");
 	
-	printf("%d", len);
-	printf("%d", len2);
+	printf("%d\n", len);
+	printf("%d\n", len2);
 
 	return (1);
 }

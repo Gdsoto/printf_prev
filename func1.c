@@ -16,12 +16,13 @@ int validate_param(const char *format, va_list param, int i)
 		{'d', print_int},
 		{'i', print_int},
 		{'r', print_reverse},
+		{'R', print_Rot},
 		{'\0', NULL}
 	};
 
 	int size = 0, j = 0;
 
-	while (j <= 5)
+	while (j <= 6)
 	{
 		if (format[i + 1] == ops[j].type)
 		{
