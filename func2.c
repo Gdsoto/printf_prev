@@ -53,10 +53,8 @@ int printperc(void)
  */
 int print_int(va_list param)
 {
-	int i = 1, j, division = 1;
-	int number = va_arg(param, int), number2 = 0;
-	unsigned int decimal = number;
-	unsigned int number3 = number;
+	int i, j, division = 1, number = va_arg(param, int), number2 = 0;
+	unsigned int decimal = number, number3 = number;
 
 	if (number >= 0 && number <= 9)
 	{
@@ -78,27 +76,19 @@ int print_int(va_list param)
 			number3 = number;
 			decimal = number;
 		}
-	while (decimal >= 10)
-	{
-		decimal = decimal / 10;
-		i++;
+		for (i = 1; decimal >= 10; i++)
+			decimal = decimal / 10;
+		for (j = i; j > 1; j--)
+			division = division * 10;
+		for (j = 1; j <= i; j++)
+		{
+			decimal = number3 / division;
+			number3 = number3 - (decimal * division);
+			division = division / 10;
+			_putchar('0' + decimal);
+		}
 	}
-	for (j = i; j > 1; j--)
-	{
-		division = division * 10;
-	}
-	for (j = 1; j <= i; j++)
-	{
-		decimal = number3 / division;
-		number3 = number3 - (decimal * division);
-		division = division / 10;
-		_putchar('0' + decimal);
-	}
-
-	}
-if (number2 == 1)
-{
-	return (i + 1);
-}
-return (i);
+	if (number2 == 1)
+		return (i + 1);
+	return (i);
 }
