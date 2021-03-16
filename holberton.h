@@ -29,6 +29,6 @@ int print_int(va_list params);
 int print_reverse(va_list param);
 int print_Rot(va_list param);
 int toBinary(unsigned int num, int i);
-int printBinary (va_list param);
+int printBinary(va_list param);
 
 #endif /* HOLBERTON_H */
