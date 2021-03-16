@@ -94,7 +94,6 @@ int print_int(va_list param)
 		division = division / 10;
 		_putchar('0' + decimal);
 	}
-
 	}
 if (number2 == 1)
 {
