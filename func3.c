@@ -65,9 +65,10 @@ int toBinary(unsigned int num, int i)
 
 	if (num)
 	{
-		len toBinary(num / 2, '0');
+		len = toBinary(num / 2, '0');
 	}
 	len += i;
+	{
 	return (len);
 	}
 }
@@ -88,7 +89,7 @@ int printBinary (va_list param)
 		return (1);
 	}
 	abs = num;
-	len = toBinary(Aabs , 1);
+	len = toBinary(abs , 1);
 	len--;
 	return (len);
 }
