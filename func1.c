@@ -13,6 +13,8 @@ int validate_param(const char *format, va_list param, int i)
 		{'c', printchar},
 		{'s', printstring},
 		{'%', printperc},
+		{'d', print_int},
+		{'i', print_int},
 		{'\0', NULL}
 	};
 
