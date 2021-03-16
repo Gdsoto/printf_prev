@@ -53,6 +53,7 @@ int print_Rot(va_list param)
 	}
 	return (len);
 }
+
 /**
  * toBinary - A utility function to convert a binary
  * @num: entry parameter
@@ -65,19 +66,20 @@ int toBinary(unsigned int num, int i)
 
 	if (num)
 	{
-		len = toBinary(num / 2, '0');
+		len = toBinary(num / 2, i);
+		_putchar((num % 2) + '0');
 	}
-	len += i;
-	{
+	len = len + i;
 	return (len);
-	}
 }
+
+
 /**
  * printBinary - A utility function to convert a binary
  * @param: entry parameter
  * Return: len
  */
-int printBinary (va_list param)
+int printBinary(va_list param)
 {
 	unsigned int abs = 0;
 	int len = 0, num = 0;
@@ -89,7 +91,7 @@ int printBinary (va_list param)
 		return (1);
 	}
 	abs = num;
-	len = toBinary(abs , 1);
+	len = toBinary(abs, 1);
 	len--;
 	return (len);
 }
