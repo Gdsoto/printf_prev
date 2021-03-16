@@ -53,7 +53,7 @@ int printperc(void)
  */
 int print_int(va_list param)
 {
-	int i, j, division = 1, number = va_arg(param, int), number2 = 0;
+	int i = 1, j, division = 1, number = va_arg(param, int), number2 = 0;
 	unsigned int decimal = number, number3 = number;
 
 	if (number >= 0 && number <= 9)
