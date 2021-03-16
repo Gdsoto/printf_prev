@@ -24,5 +24,6 @@ int _printf(const char *format, ...);
 int printstring(va_list param);
 int printchar(va_list params);
 int printperc(void);
+int _putchar(char c);
 /*int printint(va_list params);*/
 #endif /* HOLBERTON_H */
