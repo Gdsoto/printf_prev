@@ -4,7 +4,7 @@ int main(void)
 {
 	int len;
 
-	len = _printf("%b\n", 65);
+	len = _printf("%x\n", 500);
 	printf("%d\n", len);
 	return (1);
 }
