@@ -1,23 +1,44 @@
 #include "holberton.h"
+
 /**
-* print_oct - prints a octal
-* @param: list of parameters
-* Return: oct
-*/
-
-int print_oct(va_list param)
+ * toOct - A utility function to convert a octal
+ * @num: entry parameter
+ * @i: entry parameter
+ * Return: len
+ */
+int toOct(unsigned int num, int i)
 {
-unsigned int num = va_arg(param, int);
-int oct = 0;
-int i = 1, len = 0;
+	int len = 0;
 
-while (num != 0)
+	if (num)
+	{
+		len = toOct(num / 8, i);
+		_putchar((num % 8) + '0');
+	}
+	len = len + i;
+	return (len);
+}
+
+
+/**
+ * printoct - A utility function to convert a octal
+ * @param: entry parameter
+ * Return: len
+ */
+int printoct(va_list param)
 {
-oct += (num % 8) * i;
-num /= 8;
-i *= 10;
-len++;
+	unsigned int abs = 0;
+	int len = 0, num = 0;
+
+	num = va_arg(param, int);
+	if (num < 1)
+	{
+		_putchar('0');
+		return (1);
+	}
+	abs = num;
+	len = toOct(abs, 1);
+	len--;
+	return (len);
 }
-oct--;
-return (oct);
-}
+
