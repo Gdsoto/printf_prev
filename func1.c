@@ -18,7 +18,6 @@ int validate_param(const char *format, va_list param, int i)
 		{'r', print_reverse},
 		{'R', print_Rot},
 		{'b', printBinary},
-		{'x', print_hex},
 		{'o', printoct},
 		{'\0', NULL}
 	};

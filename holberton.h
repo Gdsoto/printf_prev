@@ -30,7 +30,10 @@ int print_reverse(va_list param);
 int print_Rot(va_list param);
 int toBinary(unsigned int num, int i);
 int printBinary(va_list param);
+<<<<<<< HEAD
 int printoct(va_list param);
+=======
 int print_hex(va_list param);
+>>>>>>> a1fa5fa0999e4b1279023bf6f507847f04652e4c
 
 #endif /* HOLBERTON_H */
