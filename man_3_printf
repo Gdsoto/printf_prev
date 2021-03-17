@@ -1,0 +1,48 @@
+.\" Manpage for _printf.
+.TH _printf 1 "16 March 2021" "0.1" "_printf man page"
+.SH NAME
+.B _printf  \" name of program
+.I - copy of printf function in c
+.SH SYNOPSIS
+.IP
+.B ./a.out
+.IP
+.I [no options]
+.SH DESCRIPTION
+.B _printf
+is a project for Holberton School based in original printf to print anything based in the format of the string
+
+.SH Compilation
+.P
+To compile it is necessary to use GCC, and this flag:
+.P
+.B gcc -Wall -Werror -Wextra -pedantic *.c
+.P
+To run _printf you must write the following:
+.P
+.B ./a.out
+.P
+.SH Basic options
+.B c
+.I - prints the argument to data type char
+
+.B s
+.I - prints the argument to data type string
+
+.B d , i
+.I - prints the argument to data type integer
+
+.B b
+.I - prints the argument to binary
+
+.B r
+.I - prints the argument in reverse
+
+.B R
+.I - prints the argument to format ROT13
+
+.SH AUTHORS
+Nicolas Gonzales, Stiven Gonzales, Gerson Soto
+
+.SH REPORTING BUGS
+No known bugs.

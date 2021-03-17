@@ -40,7 +40,7 @@ After compiling, there will be an **a.out** file and we execute it with the comm
 
 ## Project structure
 
-![Proyect flow chart](https://raw.githubusercontent.com/Gdsoto/printf_prev/main/functions/Printf.png)
+![Proyect flow chart](https://raw.githubusercontent.com/Gdsoto/printf/main/img/Printf.png)
 
 ## AUTHORS
 * Nicolas Gonzales

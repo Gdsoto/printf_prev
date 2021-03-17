@@ -41,4 +41,3 @@ int printoct(va_list param)
 	len--;
 	return (len);
 }
-
