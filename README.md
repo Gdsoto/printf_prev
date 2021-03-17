@@ -31,12 +31,12 @@ After compiling, there will be an **a.out** file and we execute it with the comm
 ## Features
 - [x] Use %c
 - [x] Use %s
-- [ ] Use %i
-- [ ] Use %d
-- [ ] Use %b
+- [x] Use %i
+- [x] Use %d
+- [x] Use %b
 - [ ] Use %u
 - [ ] Use %x
-- [ ] Use %r
+- [x] Use %r
 
 ## Project structure
 
