@@ -40,9 +40,13 @@ To run _printf you must write the following:
 
 .B R
 .I - prints the argument to format ROT13
+.B o
+.I - prints the argument to format octal
+.B x
+.I - prints the argument to format hexadecimal
 
 .SH AUTHORS
-Nicolas Gonzales, Stiven Gonzales, Gerson Soto
+Nicolas Gonzalez, Stiven Gonzalez, Gerson Soto
 
 .SH REPORTING BUGS
 No known bugs.
