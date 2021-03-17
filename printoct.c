@@ -41,10 +41,6 @@ int printoct(va_list param)
 	len--;
 	return (len);
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 /**
 * print_oct - prints a octal
 * @param: list of parameters
@@ -73,7 +69,6 @@ return (oct);
 * Return: oct
 */
 
->>>>>>> 67df9b2f8cf4da194fc3fdad9c85637dff0a408c
 int print_hex(va_list param)
 {
 unsigned char dec = va_arg(param, int);
@@ -85,5 +80,3 @@ return (-1);
 for (dec = 0; dec <= 9; dec++)
 
 }
->>>>>>> a1fa5fa0999e4b1279023bf6f507847f04652e4c
-

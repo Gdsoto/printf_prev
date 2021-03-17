@@ -2,13 +2,12 @@
  #include <limits.h>
 int main(void)
 {
-<<<<<<< HEAD
 	int len;
 
 	len = _printf("%x\n", 500);
 	printf("%d\n", len);
 	return (1);
-=======
+
   int alen, elen;
   char c = 'z';
   char *str = NULL;
@@ -63,5 +62,4 @@ int main(void)
   printf("Expected: %d\n", elen);
   printf("Actual  : %d\n", alen);
   return (0);
->>>>>>> 67df9b2f8cf4da194fc3fdad9c85637dff0a408c
 }
