@@ -23,7 +23,6 @@ int _printf(const char *format, ...)
 			size = validate_param(format, param, i);
 			if (size == 0)
 			{
-				if (format[i] == '%' && (format[i + 1] != 'c') && (format[i + 1] != 's'))
 				{
 					write(1, &format[i], 1);
 					length++;
